@@ -1,3 +1,28 @@
-.linkClass{
-  color: red;
+@use 'variables';
+
+nav{
+  color: variables.$plain-text;
+  text-transform: uppercase;
+  font-weight: lighter;
+  display: flex;
+  .logo{
+    width: clamp(5vw, 70px, 10vw);
+  }
+
+  ul{
+    list-style: none;
+    display: flex;
+    width: 25vw;
+    margin: auto;
+  }
+  li{
+    margin: auto;
+  }
+  a{
+    text-decoration: none;
+    color: variables.$plain-text;
+    &:hover{
+      color: variables.$selected-text;
+    }
+  }
 }
